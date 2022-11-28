@@ -19,7 +19,7 @@ public class ProxyConnection implements Connection {
 
     void reallyClose(){
         try{
-            this.close();
+            this.connection.close();
         } catch (SQLException e){
             logger.log(Level.ERROR, "Close connection exception: {}", e.getMessage());
         }
